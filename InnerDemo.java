@@ -1,12 +1,55 @@
-class Cylinder{
+class Cylinder {
     private double length;
     private double radius;
 
-    public Cylinder(){
-
+    public Cylinder() {
     }
-   
+
+    public Cylinder(double length, double radius) {
+        setLength(length);
+        setRadius(radius);
+    }
+
+    public void printVolume() {
+        System.out.println("Volume : " + getVolume());
+    }
+
+    public double getVolume() {
+        double volume = Math.PI * radius * radius * length;
+        return volume;
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    public double getRadius(){
+    return radius;
+    }0
+
+    public void printArea() {
+        System.out.println("Area : " + getArea());
+    }
+
+    public double getArea() {
+        double area = 2 * Math.PI * radius * radius + 2 * Math.PI * radius * length;
+        return area;
+    }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public void setDimensions(double length, double radius) {
+        setLength(length);
+        setRadius(radius);
+    }
 }
+
 class Demo {
     public static void main(String args[]) {
         Cylinder c1 = new Cylinder();
